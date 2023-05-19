@@ -21,8 +21,15 @@ fetch('data.json')
 
           cell1.innerHTML = name;
           cell2.innerHTML = employee.designation || '';
-          cell3.innerHTML = employee.skills ? employee.skills.join(', ') : '';
-
+          if (employee.skills && employee.skills.length > 0) {
+            const skillList = document.createElement('ul');
+            employee.skills.forEach(skill => {
+                const listItem = document.createElement('li');
+                listItem.textContent = skill;
+                skillList.appendChild(listItem);
+            });
+            cell3.appendChild(skillList);
+        }
           const projects = employee.projects;
           if (projects && projects.length > 0) {
             const projectList = document.createElement('ul');

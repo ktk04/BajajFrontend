@@ -31,7 +31,6 @@ tbody tr:last-of-type {
 }
 
 ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -41,6 +40,9 @@ ul ul {
     padding-left: 16px;
 }
 
+.heading2{
+    margin-left: 2vh;
+}
 #search-input {
     justify-content: center;
     margin: 0 auto;
@@ -50,6 +52,7 @@ ul ul {
     box-sizing: border-box;
     border-radius: 4px;
     margin-bottom: 5vh;
+    margin-left: 2vh;
   }
 
 .heading1{
